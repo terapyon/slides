@@ -50,7 +50,7 @@ Pythonの環境構築には複数の方法が存在します。このトーク�
 - Pythonエンジニア兼経営者
 
 PythonベースのWeb系システム構築やコンサルティングを行っている。
-昨年から企業や学校へのプログラミング教育にも関わっている
+昨年から企業や学校に向けたプログラミング教育にも関わっている
 
 <img src="images/me-main.jpg">
 
@@ -58,7 +58,7 @@ PythonベースのWeb系システム構築やコンサルティングを行っ�
 
 # 共著・監修書籍
 
-最近、寺田が関連してい書籍の紹介
+最近、寺田が関連していいる書籍の紹介
 
 <div grid="~ cols-3 gap-3" m="-t-3">
 
@@ -71,11 +71,13 @@ PythonベースのWeb系システム構築やコンサルティングを行っ�
 ```text
 Python実践レシピ
 技術評論社: 2022
-鈴木たかのり著、筒井隆次 著、寺田学 著、杉田雅子 著、門脇諭 著、福田隼也 著
+鈴木たかのり著、筒井隆次 著、寺田学 著、
+杉田雅子 著、門脇諭 著、福田隼也 著
 ```
 
 ```text
-FlaskによるWebアプリ開発入門 物体検知アプリ&機械学習APIの作り方
+FlaskによるWebアプリ開発入門 
+物体検知アプリ&機械学習APIの作り方
 翔泳社: 2022
 佐藤 昌基 著、平田 哲也 著、寺田 学 監修
 ```
@@ -111,7 +113,7 @@ FlaskによるWebアプリ開発入門 物体検知アプリ&機械学習APIの�
 - 国立大学法人一橋大学 社会学研究科 地球社会専攻 非常勤講師
 - NVDA日本語チーム
 - Plone User's Group Japan
-- Python mini hack a thon 主宰
+- Python mini hack-a-thon 主宰
 
 ---
 layout: section
@@ -143,7 +145,7 @@ layout: section
 | インストール方法         | 公式インストーラ |
 | 仮想環境                | venv             |
 | パッケージインストール     | pip              |
-| エディタ                | VSCode           |
+| エディタ                | VS Code           |
 
 
 ---
@@ -168,13 +170,14 @@ layout: section
   - Python で実装
 - MicroPython
   - 機能限定のPython
+  - マイクロコントローラー向
 - Cython
   - 高速化
 
 </div>
 <div v-click>
 
-## 選択方法
+## 選択基準
 
 - 特別な理由がなければ
 - CPython でいい。
@@ -227,7 +230,7 @@ layout: section
 # Python バージョンの選択
 
 - 特別な理由がなければ
-  - 最新がでてから、半年くらいたったバージョン
+  - 最新が出てから、半年くらいたったバージョン
 - 選択するときのポイント
   - ライブラリが対応しているか？
   - 動作させる環境は？
@@ -237,7 +240,7 @@ layout: section
 # バージョンアップのタイミング
 
 - あせって、Python のバージョンを上げなくてもいい
-  - 5 年間の保守期間があるので
+  - 5年間の保守期間があるので
 - 上げるモチベーション
   - 新しい機能を使いたい
   - ライブラリの対応状況が変わる
@@ -265,7 +268,7 @@ layout: section
 - OS パッケージマネージャー
   - apt / DNF / brew
 - Anaconda
-  - 様々なパッケージがまとめてインストール
+  - 様々なパッケージをまとめてインストール
 
 </div>
 <div v-click>
@@ -308,6 +311,19 @@ class: my-cool-content-on-the-right
   - 公式インストーラでインストール可能
   - マイクロバージョンを混在させることはできない
 
+<br>
+<br>
+
+例
+
+```
+Python 3.9.8
+```
+
+- 3: メジャー
+- 9: マイナー
+- 8: メジャー
+
 ---
 layout: section
 
@@ -326,7 +342,7 @@ layout: section
 <div v-click>
 
 - Python レイヤーの仮想環境に限定
-- OS を仮想化やコンテナ化とは別物
+- OS の仮想化やコンテナ化とは別物
 </div>
 
 ---
@@ -369,12 +385,12 @@ $ rm -r venv  # 仮想環境のフォルダを削除
 
 Windows
 
-```bash
+```shell
 > py -m venv venv  # venvというフォルダができる
 > venv\Scripts\Activate.ps1 # 仮想環境を有効化
 (venv) >   # プロンプトが変化
 (venv) > deactivate # 仮想環境の無効化
-$ rmdir venv  # 仮想環境のフォルダを削除
+> rmdir venv  # 仮想環境のフォルダを削除
 ```
 </div>
 </div>
@@ -427,7 +443,7 @@ $ sourse venv/bin/activate  # 仮想環境を有効化
 
 # wheel とは
 
-- PEP427 The Wheel Binary Package Format
+- PEP427 The Wheel Binary Package Format 1.0 (最新は PEP 491 Format 1.9)
 - ビルド済みの配布用パッケージ
 - Cコンパイラが必要なパッケージに対応
 - ピュアPythonでもwheel提供されている
@@ -447,7 +463,7 @@ Flask-2.0.2-py3-none-any.whl
 ```
 
 
-最近は多くのパッケージのWheelが準備されているので、Windows / macOS / Linux用など専用に準備されているパッケージが多い
+最近は、Windows / macOS / Linux用などのwheelが専用に準備されているパッケージが多い
 
 ---
 layout: section
@@ -465,9 +481,9 @@ layout: section
 
 ## エディタの種類
 
-- VSCode
+- VS Code
     - 無料、統合環境、様々な言語に対応
-- PyCharme
+- PyCharm
     - 有料、統合環境、Pythonに特化
 - Atom
     - 無料、統合環境とまでは言えない
@@ -483,12 +499,12 @@ layout: section
 
 ## エディタの選択
 
-- 特に制約はないが、
+- 特に制約はない
 - 最初は統合環境を使うのが良い
 - シンタクスハイライトやエラーの表示
 - いくつか試してみるのが良い
 - 迷ったら
-    - **VSCode** で良いと思っている
+    - **VS Code** で良いと思っている
     - **PyCharm** は整っている感じで良いとは思う
 
 </div>
@@ -505,7 +521,7 @@ layout: section
 | インストール方法         | 公式インストーラ |
 | 仮想環境                | venv             |
 | パッケージインストール     | pip              |
-| エディタ                | VSCode           |
+| エディタ                | VS Code           |
 
 ---
 
@@ -518,7 +534,7 @@ layout: section
 | インストール方法         | 公式インストーラ |
 | 仮想環境                | venv             |
 | パッケージインストール     | pip              |
-| エディタ                | VSCode           |
+| エディタ                | VS Code           |
 
 ---
 
@@ -531,7 +547,7 @@ layout: section
 | インストール方法         | ソースビルド /opt |
 | 仮想環境                | venv             |
 | パッケージインストール     | pip              |
-| エディタ                | VSCode           |
+| エディタ                | VS Code           |
 
 ---
 
@@ -544,7 +560,7 @@ layout: section
 | インストール方法         | 公式インストーラ    |
 | 仮想環境                | venv             |
 | パッケージインストール     | pip              |
-| エディタ                | VSCode           |
+| エディタ                | VS Code           |
 
 ---
 layout: iframe-right
@@ -559,6 +575,8 @@ class: my-cool-content-on-the-left
 - 2020年2月からPodcastを配信
 - Pythonの話題やコミュニティの話題などを扱っている
 - 書籍関連の情報
+
+<img src="images/podcast.terapyon.png">
 
 ---
 layout: cover
