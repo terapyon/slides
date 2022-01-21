@@ -228,9 +228,9 @@ layout: section
 | 2014 |  | 3.4 |  |
 | 2015 |  | 3.5 |  |
 | 2016 |  | 3.6 | Python Boot Camp |
-| 2017 |  | 3.7 | PyCon mini Kumamoto |
-| 2018 |  | 3.8 | PyCon Kyushu in Fukuoka |
-| 2019 |  |  | PyCon Kyushu in Okinawa |
+| 2017 |  |  | PyCon mini Kumamoto |
+| 2018 |  | 3.7 | PyCon Kyushu in Fukuoka |
+| 2019 |  | 3.8 | PyCon Kyushu in Okinawa |
 | 2020 | End of Life | 3.9 |  |
 | 2021 |  | 3.10 |  |
 | 2022 |  | 3.11 | PyCon Kyushu in Kumamoto |
@@ -310,8 +310,8 @@ class: my-cool-content-on-the-right
 - 科学技術計算系のパッケージが同梱されている
 - インストールは手軽だが、
   - ハマリポイントも多い
-- Windows 環境でも、公式版と pip でインストールが可能
-  - wheel のおかげ
+- Windows 環境でも、Anacondaを使わずに、公式版と pip でインストールが可能
+  - **wheel** のおかげ
 - 大企業で使う場合は有料化されているので注意
 
 ---
