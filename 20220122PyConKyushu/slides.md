@@ -1,7 +1,7 @@
 ---
 # try also 'default' to start simple
 theme: default
-background: ./images/me-cover.jpg
+background: ./images/kumamoto-jo.jpg
 # apply any windi css classes to the current slide
 class: "text-center"
 # https://sli.dev/custom/highlighters.html
@@ -112,20 +112,6 @@ FlaskによるWebアプリ開発入門 物体検知アプリ&機械学習APIの�
 - NVDA日本語チーム
 - Plone User's Group Japan
 - Python mini hack a thon 主宰
-
----
-layout: iframe-right
-
-url: https://podcast.terapyon.net/
-
-class: my-cool-content-on-the-left
----
-
-# 個人のPodcastを紹介
-
-- 2020年2月からPodcastを配信
-- Pythonの話題やコミュニティの話題などを扱っている
-- 書籍関連の情報
 
 ---
 layout: section
@@ -372,7 +358,7 @@ Linux / macOS
 
 ```bash
 $ python -m venv venv  # venvというフォルダができる
-$ sourse venv/bin/activate  # 仮想環境を有効化
+$ source venv/bin/activate  # 仮想環境を有効化
 (venv) $   # プロンプトが変化
 (venv) $ deactivate  # 仮想環境の無効化
 $ rm -r venv  # 仮想環境のフォルダを削除
@@ -387,7 +373,7 @@ Windows
 > py -m venv venv  # venvというフォルダができる
 > venv\Scripts\Activate.ps1 # 仮想環境を有効化
 (venv) >   # プロンプトが変化
-(venv) > deactivate. # 仮想環境の無効化
+(venv) > deactivate # 仮想環境の無効化
 $ rmdir venv  # 仮想環境のフォルダを削除
 ```
 </div>
@@ -444,6 +430,7 @@ $ sourse venv/bin/activate  # 仮想環境を有効化
 - PEP427 The Wheel Binary Package Format
 - ビルド済みの配布用パッケージ
 - Cコンパイラが必要なパッケージに対応
+- ピュアPythonでもwheel提供されている
 - 様々なプラットフォームに対応
 
 
@@ -485,10 +472,10 @@ layout: section
 - Atom
     - 無料、統合環境とまでは言えない
 - Emacs
-    - シンプルなエディタ、CUIベース
+    - シンプルなエディタ、拡張機能で高機能化
 - vim
     - シンプルなエディタ、CUIベース
-- IDOL
+- IDLE
     - Pythonの付属されているエディタ
 
 </div>
@@ -560,6 +547,20 @@ layout: section
 | エディタ                | VSCode           |
 
 ---
+layout: iframe-right
+
+url: https://podcast.terapyon.net/
+
+class: my-cool-content-on-the-left
+---
+
+# 個人のPodcastを紹介
+
+- 2020年2月からPodcastを配信
+- Pythonの話題やコミュニティの話題などを扱っている
+- 書籍関連の情報
+
+---
 layout: cover
 
 background: ./images/me-cover.jpg
@@ -582,3 +583,4 @@ Pythonの環境構築には複数の方法が存在します。このトーク�
     <carbon-logo-github />
   </a>
 </div>
+
