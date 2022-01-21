@@ -27,11 +27,29 @@ $ npm init slidev
 ✔ Choose the agent › npm
 ```
 
+Export用設定
+
+```
+$ npm i -D playwright-chromium
+```
+
 ## コマンド
 
 起動
 
 ```
 $ npx slidev
+```
+
+PDFエクスポート
+
+```
+$ npx slidev export
+```
+
+クリックごとのページを作る
+
+```
+$ npx slidev export --with-clicks
 ```
 
