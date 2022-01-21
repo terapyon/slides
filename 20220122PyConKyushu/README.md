@@ -26,3 +26,12 @@ $ npm init slidev
 ✔ Install and start it now? … yes
 ✔ Choose the agent › npm
 ```
+
+## コマンド
+
+起動
+
+```
+$ npx slidev
+```
+
