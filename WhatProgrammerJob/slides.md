@@ -1,383 +1,234 @@
 ---
 # try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+theme: default
+background: ./images/pyconus-terada-lt.jpg
 # apply any windi css classes to the current slide
-class: 'text-center'
+class: "text-center"
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## Python関連プレゼンテーション
+  Manabu TERADA @terapyon
 
-  Learn more at [Sli.dev](https://sli.dev)
+  CMSコミュニケーションズ [CMScom](https://www.cmscom.jp)
 # persist drawings in exports and build
 drawings:
   persist: false
 ---
 
-# Welcome to Slidev
+# プログラマーの仕事とは
 
-Presentation slides for developers
+高校生向けにプログラマーの仕事について説明します。
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
+    プレゼンテーションスタート <carbon:arrow-right class="inline"/>
   </span>
 </div>
 
 <div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+  <a href="https://twitter.com/terapyon" target="_blank" alt="GitHub"
+    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-twitter />
+  </a>
+  <a href="https://github.com/terapyon/slides" target="_blank" alt="GitHub"
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+---
+
+# 自己紹介
+
+- 氏名: 寺田　学、年齢: 51 歳
+- 小さな会社でプログラマー兼社長
+- 各種業界団体の代表理事や顧問を務める
+- 国立大学法人一橋大学 社会学研究科客員准教授
+
+Python ベースの Web 系システム構築やコンサルティングを行っている。
+
+<img src="images/me-main.jpg">
 
 ---
 
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Code
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
----
-
-# Components
+# プログラマーってどんなイメージ？
 
 <div grid="~ cols-2 gap-4">
 <div>
 
-You can use Vue components directly inside your slides.
+## よく言われること
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
+- 黒い画面に向かって、キーボードを叩いている
+- 無口で、寡黙
+- 機械と会話している？？
 
 </div>
-<div>
+<div v-click>
 
-```html
-<Tweet id="1390115482657726468" />
-```
+## 実際には
 
-<Tweet id="1390115482657726468" scale="0.65" />
+- IT技術を支える一つである、プログラムを作る
+- プログラムしてできるものは、アプリになったり、業務システムソフトウェアになる
+- 他には、AI技術を支えているのもプログラミング
 
 </div>
 </div>
 
-
----
-class: px-20
 ---
 
-# Themes
+# ITってどんなもの？
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
+- Information Technologyの略「情報技術」
+- スマホやインターネットが代表的な活用例
+- 銀行のシステムや鉄道のチケットや運行管理にも活用されている
+- LINEなどもIT技術の結晶でできているもの
 
 ---
 
-# LaTeX
+# 普段の生活とITの関連
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
+- 電車の乗換案内はスマホからサーバにアクセスして結果が表示される仕組み
+- LINEでメッセージを送受信できたり、グループチャットができたりする
+- 電子決済としてSuicaやPayPayが使える
+- YouTubeは動画をサーバにアップロードして、みんなで閲覧できる仕組み
+- スマホゲームや任天堂スイッチ
 
 ---
 
-# Diagrams
+# 業界を区分け
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+- 物販や製造などの実サービス
+- その他のサービス業など
+    - 旅行業、宿泊施設、鉄道など
+    - 銀行や証券会社などの金融機関
+    - 新聞やテレビ局などマスメディア
+    - 広告代理店
+- ITサービス関係 (インフラ関係、ゲームを含む)
+- システム構築専門業者
 
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
+---
 
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
+# 業務を区分け
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+- 全体の計画や仕様を作る
+- 詳細設計する
+- プログラミングする
+- デザインする
+- インフラ・基盤を作る
+- テストする
 
-```plantuml {scale: 0.7}
-@startuml
+---
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
+# 普段どんなことをしているのか？
 
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
+- システム構築専門業者として
+- お客さんの要望を聞き、全体の計画や仕様を作る
+- 詳細設計する
+- プログラミングしてテストする
+- インフラ・基盤を作って、実際に動くようにする
+- 要望に合わせて改造したり、修正する
 
-cloud {
-  [Example 1]
-}
+---
 
+# 技術って何？
 
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+- 情報技術にもさまざまな物がある
+- コンピューターやスマホのようなハードウエア
+- WindowsやiOSのようなOS（基盤ソフト）
+- プログラミング言語
+- プログラミングを支えるツール
+- インターネットを支える技術（ブラウザやネットワークなど）
 
 
 ---
-layout: center
-class: text-center
+layout: section
+
 ---
 
-# Learn More
+# 今すべき勉強は？
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+<!--
+- 好きなことからやれば良いと思う
+- すぐに何かを作りたいなら
+    - プログラミング言語やツールなどを学んで何かを作ってみる
+- じっくりやるなら
+    - 変化の少ない基盤やベース技術を学ぶ
+- IT技術にすぐに興味が持てないなら
+    - 数学や物理といった基礎学力
+- それもイマイチっていう人は
+    - 国語や英語、社会でも良いので何かしらの学力を付けておく
+    - 実際には仕様を書いたり、ドキュメント（技術文書など）を読むことが多いので言語や裏にある社会的な考え方は役に立つ
+-->
+
+---
+layout: section
+
+---
+
+# 大学・専門学校・就職・その他の選択はどうする？
+
+
+<!--
+- 具体的に勉強したいものがある人
+    - 大学の工学部などの情報工学科を目指す
+    - 専門学校で技術を学ぶ
+- そこまで具体的に決まっていないなら
+    - 大学で幅広い知識を学び、その上で次の道を考えるのが良いと思う
+- もし、プログラミング力などに自身があり、勉強よりも実践って思っている人は
+    - 就職をして、力を付けていく
+-->
+
+---
+layout: section
+
+---
+
+# プログラミングを今から学んだほうが良いか？
+
+
+<!--
+- いずれやることになるし、高校でも少しややることになる
+- 嫌いになると辛いので、好きになれるように勉強できると良いとは思う
+- ただ、すぐになんでもできるようになるわけではないので、頑張って着実に継続する必要がある
+-->
+
+---
+
+# 学校からの質問
+
+- 職業を選んだきっかけ
+- 仕事の内容
+- 高校卒業から今の職業まで
+- 高校時代に取り組んでいたこと、考えたいたこと
+- 高校時代にやっておくべきだったこと
+
+<!--
+
+- 職業を選んだきっかけ
+    - 元々、電機制御メーカーの営業だった。
+    - 大規模な設備投資などに影響される分野でつまらなくなった。さらに自分で物を作りたくなったので、プログラミングを勉強してプロのプログラマーになった
+- 仕事の内容
+    - 上記で回答済み
+- 高校卒業から今の職業まで
+    - 高校3年生は理系でした。
+    - 専門学校に行こうかと思っていたが、高校の先生と親に強く押されて、工学部電気工学科に行った
+    - 大学時代に強く挫折をし電気などの技術を離れたかったが、大学の教授に言われて、言葉は知っているので、メーカー営業の道へ行ったらどうだと言われた
+    - 就職難が始まったときだったので大変だったが、30人程度のベンチャー系電機制御メーカの営業になる
+    - IT系が楽しそうに見えた（2003年ごろ）
+    - プログラミングを勉強して、専門性の高いシステム構築専門業を起業した
+    - コミュニティなどを積極的に牽引して、さまざまな役割をもらった
+    - 今は、業界団体の代表理事や顧問理事をやったり、大学で客員准教授をやることになった
+- 高校時代に取り組んでいたこと、考えたいたこと
+    - 写真部や生徒会で活動していた
+    - 数学と物理は勉強していた
+    - 英語は苦手で大変だったし、国語は全く興味を持たなかった
+    - カメラ屋でアルバイト
+- 高校時代にやっておくべきだったこと
+    - 本を読む
+    - 勉強できる力を付ける。（大学に行って挫折しなかったと思う）
+-->
+
