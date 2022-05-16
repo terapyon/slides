@@ -91,11 +91,39 @@ Python ベースの Web 系システム構築やコンサルティングを行�
 
 # 普段の生活とITの関連
 
+<div grid="~ cols-2 gap-4">
+<div>
+
 - 電車の乗換案内はスマホからサーバにアクセスして結果が表示される仕組み
 - LINEでメッセージを送受信できたり、グループチャットができたりする
 - 電子決済としてSuicaやPayPayが使える
 - YouTubeは動画をサーバにアップロードして、みんなで閲覧できる仕組み
 - スマホゲームや任天堂スイッチ
+
+<mdi-train class="text-7xl text-green-400 mx-2"/>
+<logos-twitter class="text-7xl text-red-400 mx-2"/>
+<mdi-nintendo-switch class="text-7xl mx-2" />
+<mdi-credit-card-edit-outline class="text-8xl text-black-400 mx-2"/>
+<logos-apple-pay class="text-8xl text-red-400 mx-2"/>
+<logos-youtube class="text-8xl text-red-400 mx-2"/>
+
+
+</div>
+
+<div v-click>
+
+```mermaid {theme: 'neutral', scale: 1.0}
+graph TD
+B[あなた] -->|商品を選ぶ| C{Amazon}
+B -->|カートに入れる| C
+C -->|配送依頼| E[配送業者]
+E -->|配達| F[自宅]
+C -->|支払い決済| D[カード会社]
+D -->|請求| B
+
+```
+</div>
+</div>
 
 ---
 
@@ -114,12 +142,34 @@ Python ベースの Web 系システム構築やコンサルティングを行�
 
 # 業務を区分け
 
+<div grid="~ cols-2 gap-4">
+<div>
+
 - 全体の計画や仕様を作る
 - 詳細設計する
 - プログラミングする
 - デザインする
 - インフラ・基盤を作る
 - テストする
+
+
+</div>
+
+<div v-click>
+
+```mermaid {theme: 'neutral', scale: 1.0}
+graph TD
+B{顧客} -->|依頼| C[営業]
+C -->|相談| D[設計者]
+C -->|納品| B
+D --> E[プログラマー]
+D --> F[デザイナー]
+D --> G[インフラ担当]
+D --> H[テスト担当]
+H --> C
+```
+</div>
+</div>
 
 ---
 
