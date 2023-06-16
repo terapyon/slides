@@ -81,50 +81,75 @@ Python ベースの Web 系システム構築やコンサルティングを行�
 | ...  |             |          |                            |                          |
 | 2023 |             | 3.12     | PyHackCon                  |                          |
 
----
-
-# Today's Talk?
 
 ---
 
-# Memray
+# Today's Talk
 
-TODO: メインの図
+<img src="images/memray-logo.png">
+
 
 ---
 
 # Abount Memray
 
 - Do you know Memray?
-- I don’t know detail of the pronunciation, I think Mem-Rey
 - This is very powerful memory profiler.
 - Made by Bloomberg
+
+<img src="images/memray-flamegraph-sample-arr2.py.174402.png">
 
 ---
 
 # Technique of memory profiler
 
-- Two types
-- ***
+| 項目                 | 内容                                            |
+| -------------------- | ----------------------------------------------- |
+| ライブラリ名         | memray                                          |
+| プロファイリング手法   | トレーシング                                    |
+| 対応 OS              | Linux / macOS                                   |
+| Python バージョン    | 3.7 以上（執筆時点で 3.11 まで対応）            |
+| 公式サイト           | <https://bloomberg.github.io/memray/index.html> |
+| PyPI                 | <https://pypi.org/project/memray>               |
+| github               | <https://github.com/bloomberg/memray>           |
+| 執筆時点のバージョン | 1.8.0                                           |
+
 
 ---
 
 # How to use Memray
 
-- Install
-- Run
-- Show result
+## Install
+
+```sh
+$ pip install memray
+```
+
+## Run
+
+```sh
+$ memray run sample.py
+```
+
+
+## Show result
+
+```sh
+$ memray flamegraph memray-sample.py.172322.bin
+Wrote memray-flamegraph-sample.py.172322.html
+```
 
 ---
+
 # Demo
 
 ---
 
 # info
 
-- Document:
-- PyCon US Talk:
-- 日本語の記事:
+- Document: <https://bloomberg.github.io/memray/index.html>
+- PyCon US Talk: <https://youtu.be/mqu66lg79X8>
+- 日本語の記事: <https://gihyo.jp/article/2023/06/monthly-python-2306>
 
 ---
 
