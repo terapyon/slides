@@ -184,6 +184,39 @@ Wrote memray-flamegraph-sample.py.172322.html
 
 ---
 
+# One more thing...
+
+- Do you use AWS?
+- What do you watch `CloudWatch log`?
+- AWS web console is not powerful.
+
+
+---
+
+# CloudWatch log to pandas DataFrame
+
+- awswrangler.cloudwatch.read_logs
+- <https://aws-sdk-pandas.readthedocs.io/en/stable/stubs/awswrangler.cloudwatch.read_logs.html>
+
+めっちゃ便利なんで、使ってみて感想などを共有したい
+
+```py
+from datetime import datetime
+import json
+import pandas as pd
+import awswrangler as wr
+df_raw = wr.cloudwatch.read_logs(
+    log_group_names=["log-group"],
+    query="fields @timestamp, @message | sort @timestamp desc",
+    limit=100,
+    start_time=datetime(2023, 6, 17, 0, 0, 0),
+    end_time=datetime(2023, 6, 18, 0, 0, 0),
+)
+df = pd.json_normalize(df_raw.loc[:, "message"].apply(lambda x: json.loads(x)))
+```
+
+---
+
 # Manabu TERADA
 
 - Twitter: @terapyon
