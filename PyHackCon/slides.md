@@ -81,6 +81,37 @@ Python ベースの Web 系システム構築やコンサルティングを行�
 | ...  |             |          |                            |                          |
 | 2023 |             | 3.12     | PyHackCon                  |                          |
 
+---
+
+# 寺田の仕事
+
+- 会社の代表
+- Plone / Volto を使ったWebシステム構築
+- Pythonのコンサルティング
+- 教育系システムの構築 (オンライン授業/動画/MOOC/LMS)
+- Firebaseを使ったシステム構築
+- 企業向け研修講師
+- オンライン教育 企画・講師・運営
+
+---
+
+# 寺田のその他顔
+
+- 一橋大学社会学研究科 元客員准教授
+- 一般社団法人PyCon JP Association 理事
+- 一般社団法人Pythonエンジニア育成推進協会 顧問理事
+- Python Software Foundation Fellow
+- Plone Foundation member (元Ambassador)
+- Podcaster -- terapyon channel <https://podcast.terapyon.net/>
+
+---
+
+# 興味・資格
+
+- カメラは完全なるCanon党
+- アマチュア無線 電話級
+- 国内旅行業務取扱主任者
+- 第三種電気主任技術者
 
 ---
 
